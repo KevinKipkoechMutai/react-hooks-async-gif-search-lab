@@ -8,14 +8,14 @@ function GifListContainer() {
     const [search, setSearch] = React.useState("dolphins");
 
     //api key
-    const apiCode = '1iwYJT1yONNHCIeXGdp7ZHi5KcGBZKYx';
+    const apiKey = 'XRd2lGuvV6MHGzwg765r1L5VqyLzXJNo';
 
     //setting effects to fetch data
     React.useEffect(() => {
-        fetch(`https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${apiCode}&rating=g`)
+        fetch(`https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${apiKey}&rating=g`)
             .then(res => res.json())
             .then(({data}) => {
-                const gifs = data.slice(0, 3).map(gif => ({url: gif.images.original.url}));
+                const gifs = data.slice(0, 3).map((gif) => ({url: gif.images.original.url}));
                 //setting new state
                 setGif(gifs)
             })

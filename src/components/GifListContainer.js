@@ -7,7 +7,7 @@ function GifListContainer() {
     const [gif, setGif] = React.useState([]);
     const [search, setSearch] = React.useState("dolphins");
 
-    //api key
+    //api key created in Giphy Developers website
     const apiKey = 'XRd2lGuvV6MHGzwg765r1L5VqyLzXJNo';
 
     //setting effects to fetch data
